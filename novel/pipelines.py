@@ -9,9 +9,9 @@ import os
 
 class NovelPipeline(object):
     def process_item(self, item, spider):
-        if not os.path.exists('/home/zhanghua/novels/%s/' % (item['novel'])):
-            os.makedirs('/home/zhanghua/novels/%s/' % (item['novel']), exist_ok=True)
-        filename = '/home/zhanghua/novels/%s/%s.txt' % (item['novel'], item['chapter'])
+        if not os.path.exists('/home/zhanghua/fantasy_novels/%s/' % (item['novel'])):
+            os.makedirs('/home/zhanghua/fantasy_novels/%s/' % (item['novel']), exist_ok=True)
+        filename = '/home/zhanghua/fantasy_novels/%s/%s.txt' % (item['novel'], item['chapter'])
         with open(filename, 'w') as f:
             f.write(item['content'])
         return item

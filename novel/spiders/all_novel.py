@@ -13,7 +13,7 @@ class AllNovelSpider(scrapy.Spider):
 
     def parse(self, response):
         soup = BeautifulSoup(response.body, 'lxml')
-        novels = soup.find(id='main').find_all(name='a')
+        novels = soup.find(id='main').find(class_="novellist").find_all(name='a')
         for novel in novels:
             novel_url = novel.get('href')
             novel_name = novel.text
