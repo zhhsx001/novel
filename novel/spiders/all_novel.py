@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-import os
-import pandas as pd
 import scrapy
 from bs4 import BeautifulSoup
 from novel.items import NovelItem
